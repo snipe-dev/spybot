@@ -1,0 +1,24 @@
+{
+  "name": "spybot",
+  "version": "4.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc && cpx \"src/**/*.{json,png}\" dist",
+    "start": "node dist/spybot.js"
+  },
+  "dependencies": {
+    "viem": "^2.45.0",
+    "grammy": "^1.39.3",
+    "better-sqlite3": "^11.10.0",
+    "mysql2": "^3.11.4",
+    "eventemitter3": "^5.0.4"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/node": "^25.1.0",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3",
+    "cpx": "^1.5.0"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "owner": owner_tg_id,
+  "bots": [
+    {"bot_id": "eth_spybot", "bot_token": "bot_token1", "open_access": true, "polling": true},
+    {"bot_id": "bsc_spybot", "bot_token": "bot_token2", "open_access": true, "polling": false}
+  ],
+  "rpc_urls" : [
+    "https://ethereum-rpc.publicnode.com",
+    "https://ethereum-rpc2.publicnode.com"
+  ],
+  "chain": "ETHEREUM",
+  "explorer": "https://etherscan.io/",
+  "chart": "https://dexscreener.com/ethereum/",
+  "vault": "Ξ",
+  "multicall_address" : "0xcA11bde05977b3631167028862bE2a173976CA11",
+  "database": {
+    "host": "10.1.1.150",
+    "user": "bot_user",
+    "password": "password",
+    "database": "spybot"
+  },
+  "buttons": [
+    [
+      {"text": "✅😎 Blazing Bot", "url": "https://t.me/blazing_trading_bot?start=ref_SCTOLS_$$ADDRESS$$"},
+      {"text": "Banana Gun 🍌🔫", "url": "https://t.me/BananaGunSniper_bot?start=snp_STOLS_$$ADDRESS$$"}
+    ]
+  ]
+}

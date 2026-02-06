@@ -76,7 +76,6 @@ export class MessageBuilder {
 
         msg += `<b>$$NAME$$</b>\n`;
 
-        // Определяем текст для адреса назначения (new/to)
         const toLabel = p.isContractAddress ? 'new  :' : 'to   :';
 
         msg += `<a href="${this.config.explorer}address/${p.from}/transactions">➥</a><code>from :</code> <code>${this.resolveENS(p.from)}</code>${this.dot(address, p.from)}\n`;
@@ -99,20 +98,12 @@ export class MessageBuilder {
         msg += `<code> at </code><a href="${this.config.explorer}txs?block=${decoded.blockNumber}/">${decoded.blockNumber}</a> | `;
         msg += `<code>Find: </code>#S${address.slice(34, 42)}`;
 
-        // Добавляем хештег токена, если есть
         if (p.tokenForButton) {
             msg += ` | <code>Token: </code>#T${p.tokenForButton.slice(2, 10)}`;
         }
         msg += `\n`;
 
         msg += `<b>${this.config.chain}</b>`;
-
-        // Добавляем ссылки на gmgn.ai (как в JS версии)
-        msg += ` | <a href="https://gmgn.ai/bsc/address/${address}"><b>[W-GM]</b></a>`;
-        if (p.tokenForButton) {
-            msg += ` | <a href="https://gmgn.ai/bsc/token/${p.tokenForButton}"><b>[T-GM]</b></a>`;
-        }
-
         return {
             text: msg,
             buttons: p.tokenForButton
@@ -165,7 +156,6 @@ export class MessageBuilder {
         let interactions = "";
         let tokenForButton: string | null = null;
 
-        // Начальная иконка направления (как в JS)
         let icon = address === tx.to ? "↘️:  " : "↖️:  ";
         let from = tx.from;
         let to = tx.to ?? address;
@@ -180,7 +170,6 @@ export class MessageBuilder {
                 const token = tokens[i];
                 const symbol = interact[token];
 
-                // Используем импортированный baseTokens для проверки популярных токенов
                 if (!baseTokens.includes(symbol)) {
                     interactions += `<a href="${this.config.chart}${token}?maker=${tx.from}"><b>[${symbol}]</b></a>`;
                     interactions += `<a href="${this.config.explorer}token/${token}"><b>[➥]</b></a> | `;
@@ -193,9 +182,7 @@ export class MessageBuilder {
             interactions = interactions.slice(0, -2) + "\n";
         }
 
-        // Логика определения иконок из JS версии (оставляем только нужные)
         try {
-            // 1. Transfer иконка (один токен, селектор transfer)
             if (tokens.length === 1 && selector === '0xa9059cbb') {
                 if (address === from) {
                     icon = "💰➡️:  ";
@@ -203,14 +190,12 @@ export class MessageBuilder {
                     icon = "➡️💰:  ";
                 }
 
-                // Добавляем информацию о сумме перевода, если она есть в декодированных данных
                 if (decoded.amount) {
-                    interactions = interactions.slice(0, -1); // Убираем последний \n
+                    interactions = interactions.slice(0, -1);
                     interactions += `→ ${decoded.amount}\n`;
                 }
             }
 
-            // 2. Покупка/продажа (множество токенов)
             if (tokens.length > 1) {
                 if (tx.value === 0n) {
                     icon = '<b>⚪️ Sell</b>:  ';
@@ -223,16 +208,13 @@ export class MessageBuilder {
             }
 
         } catch (e) {
-            // В случае ошибки оставляем базовую иконку
             console.error('Error determining icon:', e);
         }
 
-        // Проверяем, является ли адрес назначения новым контрактом
         if (decoded.contractAddress && to === decoded.contractAddress) {
             isContractAddress = true;
         }
 
-        // Добавляем статус в начало иконки
         icon = this.checkStatus(decoded.status) + icon;
 
         return {

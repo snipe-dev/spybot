@@ -1,5 +1,5 @@
 {
-  "owner": 955954371,
+  "owner": 123456789,
   "bots": [
     {"bot_id": "eth_spybot", "bot_token": "bot_token1", "open_access": true, "polling": false},
     {"bot_id": "bsc_spybot", "bot_token": "bot_token2", "open_access": true, "polling": true}

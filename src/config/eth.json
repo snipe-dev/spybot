@@ -1,5 +1,5 @@
 {
-  "owner": owner_tg_id,
+  "owner": 123456789,
   "bots": [
     {"bot_id": "eth_spybot", "bot_token": "bot_token1", "open_access": true, "polling": true},
     {"bot_id": "bsc_spybot", "bot_token": "bot_token2", "open_access": true, "polling": false}

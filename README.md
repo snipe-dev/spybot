@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/snipe-dev/spybot/master/src/assets/repo.png" height="400" alt="Spybot Logo" />
+<img src="https://raw.githubusercontent.com/snipe-dev/spybot/master/src/assets/log2o.png" height="400" alt="Spybot Logo" />
 
 <br/>
 <br/>

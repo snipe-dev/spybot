@@ -1,4 +1,4 @@
-# _SPYBOT --- EVM Wallet Transaction Monitor
+# _SPYBOT — EVM Wallet Transaction Monitor
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/snipe-dev/spybot/master/src/assets/logo.png" width="320" alt="Spybot Logo" />

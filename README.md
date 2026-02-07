@@ -1,21 +1,37 @@
+<div align="center">
+
+<img src="https://raw.githubusercontent.com/snipe-dev/spybot/master/src/assets/repo.png" height="400" alt="Spybot Logo" />
+
+<br/>
+<br/>
+
+<strong>
+Production-grade EVM wallet transaction monitoring system
+</strong>
+
+<br/>
+<br/>
+
+![Last Commit](https://img.shields.io/github/last-commit/snipe-dev/spybot?style=flat-square)
+![Stars](https://img.shields.io/github/stars/snipe-dev/spybot?style=flat-square)
+![Node](https://img.shields.io/badge/node-22+-blue?style=flat-square&logo=node.js)
+![TypeScript](https://img.shields.io/badge/typescript-5.x-blue?style=flat-square&logo=typescript)
+![Users](https://img.shields.io/badge/1000%2B-Active%20Users-2ea44f?style=flat-square)
+
+
+### Live Bots
+
+[![ETH Bot](https://img.shields.io/badge/ETH__SPYBOT-2CA5E0?style=flat-square&logo=telegram&logoColor=white)](https://t.me/ETH_SPYBOT)
+[![BSC Bot](https://img.shields.io/badge/BSC__SPYBOT-2CA5E0?style=flat-square&logo=telegram&logoColor=white)](https://t.me/BSC_SPYBOT)
+[![BASE Bot](https://img.shields.io/badge/BASE__SPYBOT-2CA5E0?style=flat-square&logo=telegram&logoColor=white)](https://t.me/BASE_SPYBOT)
+[![AVAX Bot](https://img.shields.io/badge/AVAX__SPYBOT-2CA5E0?style=flat-square&logo=telegram&logoColor=white)](https://t.me/AVAX_SPYBOT)
+
+</div>
+
+---
+
+
 # _SPYBOT — EVM Wallet Transaction Monitor
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/snipe-dev/spybot/master/src/assets/logo.png" width="320" alt="Spybot Logo" />
-</p>
-
-<p align="center">
-  <strong>Full working Telegram bot available:</strong><br />
-  <a href="https://t.me/ETH_SPYBOT">@ETH_SPYBOT</a><br />
-  <strong>[ Ethereum Wallet Tracker Bot ]</strong>
-
-</p>
-<p align="center">
-  <a href="https://t.me/BSC_SPYBOT">@BSC_SPYBOT</a><br />
-  <strong>[ BSC Wallet Tracker Bot ]</strong>
-</p>
-
-------------------------------------------------------------------------
 
 SpyBot is a high-performance Telegram bot for real-time monitoring of
 wallet activity across **EVM-compatible blockchains**.

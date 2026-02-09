@@ -1,6 +1,13 @@
 # Dependencies
 node_modules/
-package-lock.json
 
-# Migration directory
-src/migration/
+# Build output
+dist/
+
+# Local configs
+src/config/*.json
+!src/config/*.example.json
+
+# Local data (если есть)
+*.log
+
